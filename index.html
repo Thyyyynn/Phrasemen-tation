@@ -264,10 +264,10 @@
         const res = await fetch(BEST_PERSONA_URL);
         if (!res.ok) throw new Error('Failed to load Best persona');
         const text = await res.text();
-        BUILTIN_PERSONAS.Best = text.trim();
+        BUILTIN_PERSONAS.Jailbroken = text.trim();
         console.log('Best persona loaded');
       } catch (err) {
-        BUILTIN_PERSONAS.Best = 'Fallback Best persona: respond directly and efficiently.';
+        BUILTIN_PERSONAS.Jailbroken = 'Fallback Best persona: respond directly and efficiently.';
         console.error(err);
       }
     }
